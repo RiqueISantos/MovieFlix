@@ -122,7 +122,7 @@ A API estará disponível em `http://localhost:8080`
 
 ## Documentação da API
 A documentação completa e interativa da API está disponível no Swagger:  
-[Visualizar no Swagger](http://localhost:8080/swagger-ui/index.html) 
+[Visualizar no Swagger](http://localhost:8080/swagger/swagger-ui/index.html) 
 
 ### Endpoints
 
