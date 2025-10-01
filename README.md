@@ -161,14 +161,6 @@ Consulte a [documentação dos scripts](curl-scripts/README.md) para mais detalh
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## Versionamento
-
-Usamos [SemVer](http://semver.org/) para versionamento. Para as versões disponíveis, veja as [tags neste repositório](https://github.com/seu-usuario/flix/tags).
-
 ## Autores
 
 * **Henrique Santos** - *Trabalho inicial*
-
-## Licença
-
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes. 
