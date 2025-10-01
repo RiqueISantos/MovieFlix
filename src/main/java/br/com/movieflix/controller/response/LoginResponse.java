@@ -1,4 +1,7 @@
 package br.com.movieflix.controller.response;
 
-public record LoginResponse(String token) {
+import io.swagger.v3.oas.annotations.media.Schema;
+
+public record LoginResponse(@Schema(type = "string", description = "token para login")
+                            String token) {
 }
