@@ -2,7 +2,6 @@ package br.com.movieflix.controller;
 
 import br.com.movieflix.controller.request.CategoryRequest;
 import br.com.movieflix.controller.response.CategoryResponse;
-import br.com.movieflix.controller.response.MovieResponse;
 import br.com.movieflix.entity.Category;
 import br.com.movieflix.mapper.CategoryMapper;
 import br.com.movieflix.service.CategoryService;
