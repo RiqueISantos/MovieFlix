@@ -108,6 +108,8 @@ PostgreSQL 15+
 
 Maven 3.8+
 
+Curl
+
 ▶️ Como Executar
 
 Scripts disponíveis:
@@ -137,28 +139,44 @@ mvn spring-boot:run
 
 📖 Documentação da API
 🔐 Autenticação
-POST /auth/register   → Registrar novo usuário  
-POST /auth/login      → Login de usuário
+
+POST /auth/register → Registrar novo usuário
+
+POST /auth/login → Login de usuário
 
 📂 Categorias
-POST   /movieflix/category        → Criar categoria  
-GET    /movieflix/category        → Listar categorias  
-GET    /movieflix/category/{id}   → Buscar categoria por ID  
-DELETE /movieflix/category/{id}   → Deletar categoria
+
+POST /movieflix/category → Criar categoria
+
+GET /movieflix/category → Listar categorias
+
+GET /movieflix/category/{id} → Buscar categoria por ID
+
+DELETE /movieflix/category/{id} → Deletar categoria
 
 📺 Serviços de Streaming
-POST   /movieflix/stream-service        → Criar serviço  
-GET    /movieflix/stream-service        → Listar serviços  
-GET    /movieflix/stream-service/{id}   → Buscar serviço por ID  
-DELETE /movieflix/stream-service/{id}   → Deletar serviço
+
+POST /movieflix/stream-service → Criar serviço
+
+GET /movieflix/stream-service → Listar serviços
+
+GET /movieflix/stream-service/{id} → Buscar serviço por ID
+
+DELETE /movieflix/stream-service/{id} → Deletar serviço
 
 🎥 Filmes
-POST   /movieflix/movie                  → Criar filme  
-GET    /movieflix/movie                  → Listar filmes  
-GET    /movieflix/movie/{id}             → Buscar filme por ID  
-GET    /movieflix/movie/search?category={id} → Buscar filmes por categoria  
-PUT    /movieflix/movie                  → Atualizar filme  
-DELETE /movieflix/movie/{id}             → Deletar filme
+
+POST /movieflix/movie → Criar filme
+
+GET /movieflix/movie → Listar filmes
+
+GET /movieflix/movie/{id} → Buscar filme por ID
+
+GET /movieflix/movie/search?category={id} → Buscar filmes por categoria
+
+PUT /movieflix/movie → Atualizar filme
+
+DELETE /movieflix/movie/{id} → Deletar filme
 
 🤝 Contribuindo
 
