@@ -121,11 +121,8 @@ mvn spring-boot:run
 A API estará disponível em `http://localhost:8080`
 
 ## Documentação da API
-
-### Scripts de Teste
-
-Para testar a API, foram disponibilizados scripts curl organizados por funcionalidade. 
-Consulte a [documentação dos scripts](curl-scripts/README.md) para mais detalhes.
+A documentação completa e interativa da API está disponível no Swagger:  
+[Visualizar no Swagger](http://localhost:8080/swagger-ui/index.html) 
 
 ### Endpoints
 
