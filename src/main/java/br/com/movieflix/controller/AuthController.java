@@ -21,10 +21,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @RequiredArgsConstructor
 @RequestMapping("movieflix/auth")
@@ -94,5 +92,23 @@ public class AuthController {
         }catch (BadCredentialsException e){
             throw new UsernameOrPasswordInvalidException("Usuário ou senha inválida");
         }
+    }
+
+    @Operation(
+            summary = "Validar token",
+            description = "Método responsável por validar se o token JWT é válido. Retorna 200 se válido, 401 se inválido.",
+            security = @SecurityRequirement(name = "bearerAuth")
+    )
+    @ApiResponse(
+            responseCode = "200",
+            description = "Token válido."
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "Token inválido ou expirado."
+    )
+    @RequestMapping(value = "/validate", method = {RequestMethod.GET, RequestMethod.HEAD})
+    public ResponseEntity<Void> validateToken(){
+        return ResponseEntity.ok().build();
     }
 }

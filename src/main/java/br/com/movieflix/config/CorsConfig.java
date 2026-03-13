@@ -16,21 +16,20 @@ public class CorsConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         
-        // Permite requisições de qualquer origem (ajuste conforme necessário)
-        configuration.setAllowedOrigins(List.of("*"));
+        // Permite requisições de origens específicas (ou use "*" para todas)
+        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
         
-        // Ou se precisar enviar credenciais, use allowedOriginPatterns ao invés de allowedOrigins
-        // configuration.setAllowedOriginPatterns(List.of("*"));
-        // configuration.setAllowCredentials(true);
+        // Permite credenciais (cookies, authorization headers, etc)
+        configuration.setAllowCredentials(true);
         
         // Permite todos os métodos HTTP
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH", "HEAD"));
         
         // Permite todos os headers
-        configuration.setAllowedHeaders(List.of("*"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
         
         // Expõe headers na resposta
-        configuration.setExposedHeaders(Arrays.asList("Authorization", "Content-Type"));
+        configuration.setExposedHeaders(Arrays.asList("Authorization", "Content-Type", "Access-Control-Allow-Origin"));
         
         // Tempo de cache do preflight (em segundos)
         configuration.setMaxAge(3600L);
